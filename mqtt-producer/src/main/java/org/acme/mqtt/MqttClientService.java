@@ -19,6 +19,7 @@ public class MqttClientService {
     @PostConstruct
     public void init() {
         try {
+
             client = new MqttClient("tcp://localhost:1883", MqttClient.generateClientId());
             MqttConnectOptions options = new MqttConnectOptions();
             options.setCleanSession(true);
